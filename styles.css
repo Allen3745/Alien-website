@@ -1,22 +1,28 @@
-.menu-gallery {
+.gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 16px;
 }
 
 .gallery-item {
-  position: relative;
-  overflow: hidden;
+  background: #fff;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  transition: transform 0.3s ease;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .gallery-item:hover {
   transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.gallery-item img {
+.menu-item img {
   width: 100%;
   height: auto;
-  display: block;
+  transition: transform 0.3s;
+}
+
+.menu-item img:hover {
+  transform: scale(1.1);
 }
